@@ -14,9 +14,9 @@ function divide(a, b) {
 	return a / b;
 }
 
-const firstNumber;
-const secondNumber;
-const operator;
+let firstNumber;
+let secondNumber;
+let operator;
 
 function operate(operator, firstNumber, secondNumber) {
 	switch (operator) {
@@ -36,3 +36,15 @@ function operate(operator, firstNumber, secondNumber) {
 			break;
 	}
 }
+
+const numButtons = document.querySelectorAll('.btn.num');
+const input = document.querySelector('input');
+
+numButtons.forEach(button => {
+	let selectedNumber;
+	let numClicked = button.textContent;
+	button.addEventListener('click', () => {
+		selectedNumber = numClicked;
+		input.value += selectedNumber;
+	});
+});

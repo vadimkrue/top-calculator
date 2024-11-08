@@ -59,7 +59,7 @@ body {
 	width: 300px;
 }
 
-input[type="text"] {
+input {
 	all: unset;
 	font-size: 80px;
 	font-weight: inherit;
